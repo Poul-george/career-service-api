@@ -3,8 +3,9 @@ package config
 type MySQL struct {
 	User string `mapstructure:"user" validate:"required"`
 	Host string `mapstructure:"host" validate:"required"`
+	Tls  string `mapstructure:"tls" validate:"required"`
 	// HostReader string `mapstructure:"host_reader" validate:"required"`
-	Port string `mapstructure:"port" validate:"required"`
+	Port string `mapstructure:"port"`
 	// PortReader int    `mapstructure:"port_reader" validate:"required"`
 	Password string `mapstructure:"password"`
 	Database string `mapstructure:"database" validate:"required"`
@@ -24,6 +25,7 @@ func GetMySQLConfig() MySQL {
 	return MySQL{
 		User:     c.User,
 		Host:     c.Host,
+		Tls:      c.Tls,
 		Port:     c.Port,
 		Password: c.Password,
 		Database: c.Database,

@@ -1,7 +1,7 @@
 mysql:
   user: docker
   host: 127.0.0.1
-  # host: mysql_host
+  tls: false
   port: :3306
   password: docker
   database: postapp
