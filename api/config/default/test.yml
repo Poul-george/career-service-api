@@ -1,0 +1,17 @@
+mysql:
+  user: test
+  host: 127.0.0.1
+  # host: mysql_host
+  port: 3307
+  password: test
+  database: mysql_test
+  encoding: utf8mb4
+
+server:
+  start_address: localhost:1324
+  idle_timeout: 30_000_000_000
+  echo_allow_origin:
+    - http://localhost:1324
+    - http://localhost:3000
+    - http://127.0.0.1:5555
+    - https://test-postman-url.com

@@ -1,0 +1,28 @@
+- id: 1
+  external_user_id: 111
+  name: test1
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: test@gmail.com
+  comments: test comments
+
+- id: 2
+  external_user_id: 222
+  name: test2
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: test@gmail.com
+  comments: test comments
+
+- id: 3
+  external_user_id: 333
+  name: test3
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: test@gmail.com
+  comments: test comments
+
+- id: 4
+  external_user_id: 444
+  name: test4
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: test@gmail.com
+  comments: test comments
+  deleted_at: 2023-04-17

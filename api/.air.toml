@@ -1,0 +1,7 @@
+[build]
+# コンパイルするファイルのパスと、生成されたバイナリのパスを指定する
+cmd = "go build -o .tmp/api ./api"
+full_bin = "ENV=dev .tmp/api"
+temp_dir = "./tmp"
+
+# air -c ./api/.air.toml
