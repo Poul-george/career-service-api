@@ -2,7 +2,7 @@ mysql:
   user: docker
   host: 127.0.0.1
   # host: mysql_host
-  port: 3306
+  port: :3306
   password: docker
   database: postapp
   encoding: utf8mb4

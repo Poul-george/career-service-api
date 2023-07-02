@@ -2,7 +2,7 @@ mysql:
   user: test
   host: 127.0.0.1
   # host: mysql_host
-  port: 3307
+  port: :3307
   password: test
   database: mysql_test
   encoding: utf8mb4

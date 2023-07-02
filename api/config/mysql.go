@@ -4,7 +4,7 @@ type MySQL struct {
 	User string `mapstructure:"user" validate:"required"`
 	Host string `mapstructure:"host" validate:"required"`
 	// HostReader string `mapstructure:"host_reader" validate:"required"`
-	Port int `mapstructure:"port" validate:"required"`
+	Port string `mapstructure:"port" validate:"required"`
 	// PortReader int    `mapstructure:"port_reader" validate:"required"`
 	Password string `mapstructure:"password"`
 	Database string `mapstructure:"database" validate:"required"`

@@ -40,7 +40,7 @@ func NewHandler(c config.MySQL) *Handler {
 func GetDSN(c config.MySQL) string {
 	return fmt.Sprintf(
 		// "%s:%s@tcp(%s:%d)/%s?charset%s&parseTime=True&loc=Asia/Tokyo",
-		"%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local",
+		"%s:%s@tcp(%s%s)/%s?parseTime=true&loc=Local",
 		c.User,
 		c.Password,
 		c.Host,
