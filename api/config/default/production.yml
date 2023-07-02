@@ -1,6 +1,7 @@
 mysql:
   user:
   host:
+  tls:
   port:
   password:
   database:

@@ -30,7 +30,7 @@ func NewHandler(c config.MySQL) *Handler {
 		res, err := gorm.Open(mysql.Open(GetDSN(c)), &gorm.Config{})
 		if err != nil {
 			// panic(err.Error())
-			panic(fmt.Errorf("failed to initialize database, got error %s, dsn=%s", err.Error(), GetDSN(c)))
+			panic(fmt.Errorf("failed to initialize database, got error %s, show dsn=%s", err.Error(), GetDSN(c)))
 		}
 		handler = &Handler{handler: res}
 	})
