@@ -1,0 +1,16 @@
+mysql:
+  user:
+  host:
+  port:
+  password:
+  database:
+  encoding: utf8mb4
+
+server:
+  start_address:
+  idle_timeout:
+  echo_allow_origin:
+    - http://localhost:1324
+    - http://localhost:3001
+    - http://127.0.0.1:5555
+    - https://test-postman-url.com

@@ -20,6 +20,10 @@ type config struct {
 
 var once sync.Once
 var cfg config
+var buildMode = os.Getenv("BUILD_MODE")
+
+//go:embed default/production.yml
+var defaultProduction []byte
 
 //go:embed default/local.yml
 var defaultLocal []byte
@@ -37,6 +41,11 @@ func getConfig() config {
 		def := defaultLocal
 		if isTesting() {
 			def = defaultTest
+		} else {
+			switch buildMode {
+			case "production":
+				def = defaultProduction
+			}
 		}
 
 		// 設定ファイルを読み込みます
