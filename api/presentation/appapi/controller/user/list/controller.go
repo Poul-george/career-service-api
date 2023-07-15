@@ -2,10 +2,8 @@ package list
 
 import (
 	"github.com/Poul-george/go-api/api/presentation/appapi/common/response"
-	"github.com/Poul-george/go-api/api/util/errors"
-	"net/http"
-
 	echoContext "github.com/Poul-george/go-api/api/presentation/appapi/echoserver/context"
+	"github.com/Poul-george/go-api/api/util/errors"
 
 	usecase "github.com/Poul-george/go-api/api/core/usecase/api/user/list"
 )
@@ -17,6 +15,14 @@ type Parameter struct {
 
 type Controller struct {
 	UseCase usecase.UseCase
+}
+
+func NewController(
+	UseCase usecase.UseCase,
+) Controller {
+	return Controller{
+		UseCase: UseCase,
+	}
 }
 
 func (c Controller) Get(ctx echoContext.Context) error {
@@ -32,5 +38,5 @@ func (c Controller) Get(ctx echoContext.Context) error {
 
 	res := NewResponse(*out)
 
-	return response.OKWithItem(ctx, http.StatusOK, res)
+	return response.OK(ctx, res)
 }

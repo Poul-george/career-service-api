@@ -11,9 +11,9 @@ import (
 )
 
 func (i *Injector) V1UserListController() echo.HandlerFunc {
-	return newHandlerFunc(userList.Controller{
-		UseCase: *userListUseCase.NewUseCase(i.userRepository()),
-	}.Get)
+	return newHandlerFunc(userList.NewController(
+		*userListUseCase.NewUseCase(i.userRepository()),
+	).Get)
 }
 
 func (i *Injector) V1UserDetailController() echo.HandlerFunc {

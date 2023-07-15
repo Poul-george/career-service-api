@@ -6,15 +6,17 @@ import (
 	"github.com/Poul-george/go-api/api/core/usecase/api/user/list"
 )
 
-type Response []UserResponse
+type Response struct {
+	Items []UserResponse `json:"items"`
+}
 
 type UserResponse struct {
 	ID             uint64    `json:"id"`
-	ExternalUserID string    `json:"external_user_id"`
+	ExternalUserID string    `json:"externalUserId"`
 	Name           string    `json:"name"`
-	MailAddress    string    `json:"mail_address"`
+	MailAddress    string    `json:"mailAddress"`
 	Comments       string    `json:"comments"`
-	UpdatedAt      time.Time `json:"latest_day"`
+	UpdatedAt      time.Time `json:"latestDay"`
 }
 
 func NewResponse(out list.Output) Response {
@@ -30,5 +32,7 @@ func NewResponse(out list.Output) Response {
 		}
 	}
 
-	return users
+	return Response{
+		Items: users,
+	}
 }

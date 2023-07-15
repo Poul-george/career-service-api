@@ -2,10 +2,11 @@ package handler
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/Poul-george/go-api/api/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"testing"
 )
 
 func NewHandlerForTestFixture(t *testing.T, c config.MySQL) *Handler {
