@@ -1,0 +1,32 @@
+- id: 1
+  external_user_id: 111
+  name: user1
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: user@lcc.com
+  comments: user comments 1
+  updated_at: 2023-01-01 00:00:00
+
+- id: 2
+  external_user_id: 222
+  name: user2
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: user@lcc.com
+  comments: user comments 2
+  updated_at: 2023-01-02 00:00:00
+
+- id: 3
+  external_user_id: 333
+  name: user3
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: user@lcc.com
+  comments: user comments 3
+  updated_at: 2023-01-03 00:00:00
+  deleted_at: 2023-04-17
+
+- id: 4
+  external_user_id: 444
+  name: user4
+  password: $2a$10$tZN5qGGheum3BL9up8VhbOXpojUnlyb5vQEehb.rkPqV8VeP57aHu # test
+  mail_address: user@lcc.com
+  comments: user comments 4
+  updated_at: 2023-01-04 00:00:00
