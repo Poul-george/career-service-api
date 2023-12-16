@@ -11,6 +11,7 @@ func RouterV1Api(g *echo.Group) {
 	injector := inject.NewInjector(
 		config.GetMySQLConfig(),
 		config.GetServerConfig(),
+		config.GetRedisConfig(),
 	)
 	routerV1Api(g, injector)
 }
@@ -19,6 +20,8 @@ func routerV1Api(g *echo.Group, injector inject.Injector) {
 	g.Use(
 		middleware.CORS(),
 	)
+	g.POST("/auth/login", injector.V1AuthLoginController())
+
 	g.GET("/users", injector.V1UserListController())
 	g.GET("/users/detail", injector.V1UserDetailController())
 	g.POST("/users", injector.V1UserCreateController())
