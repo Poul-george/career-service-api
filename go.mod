@@ -3,8 +3,10 @@ module github.com/Poul-george/go-api
 go 1.19
 
 require (
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-testfixtures/testfixtures/v3 v3.8.1
 	github.com/google/go-cmp v0.5.9
+	github.com/google/uuid v1.1.2
 	github.com/labstack/echo/v4 v4.9.1
 	github.com/spf13/viper v1.15.0
 	github.com/swaggo/echo-swagger v1.4.0
@@ -18,6 +20,8 @@ require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
+	github.com/cespare/xxhash/v2 v2.1.2 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.6 // indirect
@@ -51,6 +55,7 @@ require (
 	golang.org/x/time v0.1.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
+	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
