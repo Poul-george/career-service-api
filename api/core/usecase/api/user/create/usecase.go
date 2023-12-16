@@ -2,7 +2,6 @@ package create
 
 import (
 	"context"
-	"fmt"
 	"github.com/Poul-george/go-api/api/util/errors"
 
 	"github.com/Poul-george/go-api/api/core/domain/model"
@@ -31,8 +30,6 @@ func (u *UseCase) Do(ctx context.Context, ip Input) error {
 	if err != nil {
 		return errors.Wrap(err)
 	}
-
-	fmt.Printf("--------------------{[%v] user create}----------------------------00000\n", u)
 
 	err = u.UserRepository.Create(ctx, user)
 	if err != nil {
