@@ -2,7 +2,7 @@ mysql:
   user: docker
   host: 127.0.0.1
   tls: false
-  port: :3306
+  port: :3308
   password: docker
   database: postapp
   encoding: utf8mb4
@@ -15,3 +15,8 @@ server:
     - http://localhost:3001
     - http://127.0.0.1:5555
     - https://test-postman-url.com
+
+redis:
+  host: 127.0.0.1
+  port: :6379
+  session_db: 0

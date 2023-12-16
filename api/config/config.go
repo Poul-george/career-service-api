@@ -16,6 +16,7 @@ import (
 type config struct {
 	MySQL  MySQL  `mapstructure:"mysql"`
 	Server Server `mapstructure:"server"`
+	Redis  Redis  `mapstructure:"redis"`
 }
 
 var once sync.Once

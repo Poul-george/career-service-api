@@ -18,10 +18,10 @@ type Controller struct {
 }
 
 func NewController(
-	UseCase usecase.UseCase,
+	useCase usecase.UseCase,
 ) Controller {
 	return Controller{
-		UseCase: UseCase,
+		UseCase: useCase,
 	}
 }
 
