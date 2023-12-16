@@ -14,7 +14,7 @@ import (
 
 func (i *Injector) V1AuthLoginController() echo.HandlerFunc {
 	return newHandlerFunc(authLogin.NewController(
-		*authLoginUseCase.NewUseCase(i.userRepository(), i.tokenRepository()),
+		*authLoginUseCase.NewUseCase(i.userRepository(), i.tokenRepository(), i.serviceConfig),
 	).Post)
 }
 

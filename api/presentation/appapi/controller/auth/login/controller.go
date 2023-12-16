@@ -1,7 +1,6 @@
 package login
 
 import (
-	"fmt"
 	"github.com/Poul-george/go-api/api/core/common/types/identifier"
 	usecase "github.com/Poul-george/go-api/api/core/usecase/api/auth/login"
 	"github.com/Poul-george/go-api/api/presentation/appapi/common/response"
@@ -30,11 +29,8 @@ func NewController(
 func (c Controller) Post(ctx echoContext.Context) error {
 	var p Parameter
 	if err := ctx.Bind(&p); err != nil {
-		fmt.Println("バインドエラー")
 		return response.BadRequest(ctx, err)
 	}
-
-	fmt.Printf("============================ %s ============================= ", "detail get request")
 
 	if p.ExternalUserID == "" && p.UserID == 0 {
 		return response.BadRequest(ctx, errors.New("リクエストが不正です"))

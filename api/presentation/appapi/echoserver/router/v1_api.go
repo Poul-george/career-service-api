@@ -12,6 +12,7 @@ func RouterV1Api(g *echo.Group) {
 		config.GetMySQLConfig(),
 		config.GetServerConfig(),
 		config.GetRedisConfig(),
+		config.GetServiceConfig(),
 	)
 	routerV1Api(g, injector)
 }
