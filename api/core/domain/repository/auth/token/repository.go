@@ -6,5 +6,5 @@ import (
 )
 
 type Repository interface {
-	CreateAccessToken(context.Context, model.AuthToken) (*string, error)
+	CreateAccessToken(context.Context, model.AuthToken, string) (*string, error)
 }

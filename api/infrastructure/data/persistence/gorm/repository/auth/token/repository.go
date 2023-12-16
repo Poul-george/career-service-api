@@ -17,6 +17,6 @@ func NewRepository(h *cacheHandler.RedisHandler) *Repository {
 	return &Repository{handler: h}
 }
 
-func (r *Repository) CreateAccessToken(ctx context.Context, authToken model.AuthToken) (*string, error) {
-	return generateJWT(authToken)
+func (r *Repository) CreateAccessToken(ctx context.Context, authToken model.AuthToken, appKey string) (*string, error) {
+	return generateJWT(authToken, appKey)
 }

@@ -17,7 +17,7 @@ type jwtClaims struct {
 	JwtID    uuid.UUID `json:"jid" validate:"required"`
 }
 
-func generateJWT(authToken model.AuthToken) (*string, error) {
+func generateJWT(authToken model.AuthToken, appKey string) (*string, error) {
 	now := localtime.Now()
 
 	claims := jwtClaims{
@@ -26,7 +26,7 @@ func generateJWT(authToken model.AuthToken) (*string, error) {
 		JwtID:    uuid.New(),
 	}
 
-	sig, err := jose.NewSigner(jose.SigningKey{Algorithm: jose.HS256, Key: []byte("app_key")}, (&jose.SignerOptions{}).WithType(jwtHeaderToken))
+	sig, err := jose.NewSigner(jose.SigningKey{Algorithm: jose.HS256, Key: []byte(appKey)}, (&jose.SignerOptions{}).WithType(jwtHeaderToken))
 	if err != nil {
 		return nil, errors.Wrap(err)
 	}

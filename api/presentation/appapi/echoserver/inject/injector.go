@@ -9,20 +9,23 @@ import (
 )
 
 type Injector struct {
-	mySQLConfig  config.MySQL
-	serverConfig config.Server
-	redisConfig  config.Redis
+	mySQLConfig   config.MySQL
+	serverConfig  config.Server
+	redisConfig   config.Redis
+	serviceConfig config.Service
 }
 
 func NewInjector(
 	mySQLConfig config.MySQL,
 	serverConfig config.Server,
 	redisConfig config.Redis,
+	serviceConfig config.Service,
 ) Injector {
 	return Injector{
-		mySQLConfig:  mySQLConfig,
-		serverConfig: serverConfig,
-		redisConfig:  redisConfig,
+		mySQLConfig:   mySQLConfig,
+		serverConfig:  serverConfig,
+		redisConfig:   redisConfig,
+		serviceConfig: serviceConfig,
 	}
 }
 
