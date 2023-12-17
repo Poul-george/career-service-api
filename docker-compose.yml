@@ -17,7 +17,7 @@ services:
       MYSQL_HOST: mysql_host  # 追加!!
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
-      MYSQL_PORT: 3306
+      MYSQL_PORT: 3308
     networks:
       - sample-network
 
