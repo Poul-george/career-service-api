@@ -20,6 +20,7 @@ func RouterV1Api(g *echo.Group) {
 func routerV1Api(g *echo.Group, injector inject.Injector) {
 	g.Use(
 		middleware.CORS(),
+		injector.VerifyJWTMiddleware(verifyJWT), // jwtの検証 user_id
 	)
 
 	g.GET("/users", injector.V1UserListController())
