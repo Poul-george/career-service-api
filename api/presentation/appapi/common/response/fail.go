@@ -17,6 +17,10 @@ func NotFound(c echoContext.Context, err error) error {
 	return fail(c, http.StatusNotFound, err.Error())
 }
 
+func Unauthorized(c echoContext.Context, err error) error {
+	return fail(c, http.StatusUnauthorized, err.Error())
+}
+
 // もう少し改良する
 func InternalServerError(c echoContext.Context, err error) error {
 	return fail(c, http.StatusInternalServerError, err.Error())

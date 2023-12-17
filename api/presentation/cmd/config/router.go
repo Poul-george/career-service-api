@@ -9,4 +9,5 @@ import (
 func router(e *echo.Echo) {
 	e.GET("/swagger/*", echoSwagger.WrapHandler)
 	appapi.RouterV1Api(e.Group("api/v1"))
+	appapi.RouterAuthApi(e.Group("api/auth"))
 }

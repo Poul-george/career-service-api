@@ -7,23 +7,19 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-func RouterV1Api(g *echo.Group) {
+func RouterAuthApi(g *echo.Group) {
 	injector := inject.NewInjector(
 		config.GetMySQLConfig(),
 		config.GetServerConfig(),
 		config.GetRedisConfig(),
 		config.GetServiceConfig(),
 	)
-	routerV1Api(g, injector)
+	routerAuthApi(g, injector)
 }
 
-func routerV1Api(g *echo.Group, injector inject.Injector) {
+func routerAuthApi(g *echo.Group, injector inject.Injector) {
 	g.Use(
 		middleware.CORS(),
-		injector.VerifyJWTMiddleware(verifyJWT), // jwtの検証 user_id
 	)
-
-	g.GET("/users", injector.V1UserListController())
-	g.GET("/users/detail", injector.V1UserDetailController())
-	g.POST("/users", injector.V1UserCreateController())
+	g.POST("/login", injector.AuthLoginController())
 }

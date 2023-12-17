@@ -12,7 +12,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func (i *Injector) V1AuthLoginController() echo.HandlerFunc {
+func (i *Injector) AuthLoginController() echo.HandlerFunc {
 	return newHandlerFunc(authLogin.NewController(
 		*authLoginUseCase.NewUseCase(i.userRepository(), i.tokenRepository(), i.serviceConfig),
 	).Post)
