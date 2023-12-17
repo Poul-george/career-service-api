@@ -15,3 +15,11 @@ server:
     - http://localhost:3000
     - http://127.0.0.1:5555
     - https://test-postman-url.com
+
+service:
+  secret_key: app_key
+
+redis:
+  host: 127.0.0.1
+  port: :6379
+  session_db: 0
